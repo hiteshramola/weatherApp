@@ -14,7 +14,8 @@ Runs the app in the development mode.\
 Open [http://localhost:3200](http://localhost:3200) to view it in the browser.
 
 The main page will show a basic UI with an input box for user to enter their location.
-User can also choose to automatically get location by clicking the marker just beside the input box.
+
+User can also choose to automatically get location by clicking the marker just beside the input box and giving location permission to browser.
 
 The application shows a graphical representation of the weather with temprature which can be changed to Fahrenheit or Celcius on click of the temprature shown.
 
