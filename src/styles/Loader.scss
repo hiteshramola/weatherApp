@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+:root {
+	--pink: #D291BC;
+	--white: #ffffff;
+	--size: 9vmin;
+}
+
+@mixin size($w, $h: $w) {
+	width: $w;
+	height: $h;
+}
+
+.loader_cont {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 1);
+	border-radius: 20px;
+	cursor: not-allowed;
+
+	&.show {
+		display: block;
+	}
+}
+
+.loader {
+	@include size(calc(var(--size) * 6), calc(var(--size) * 2.3));
+	display: flex;
+	justify-content: center;
+	position: relative;
+	margin: calc(50vh - calc(var(--size) * 2.3)) auto 0;
+}
+
+.loaderIn {
+	@include size(calc(var(--size) * 1.5));
+	animation: blow 1.6s linear alternate infinite;
+	background-color: var(--pink);
+	border-radius: 50%;
+	position: absolute;
+	bottom: calc(var(--size) / 1);
+	left: 50%;
+	transform: scale(0.5) translateY(50%);
+	outline: 1px solid transparent;
+
+	.loaderDiv1 {
+		background-color: var(--white);
+		position: absolute;
+		@include size(calc(var(--size) / 5), calc(calc(var(--size) / 5) * 2.5));
+		border-radius: 100% 50% 40% 100% / 50% 30% 30% 100%;
+		top: 2%;
+		left: 26%;
+		transform: rotateZ(60deg);
+	}
+
+	.loaderDiv2 {
+		background-color: var(--white);
+		position: absolute;
+		@include size(calc(calc(var(--size) / 5) / 2));
+		border-radius: 50% 50% 40% 100% / 50% 50% 50% 100%;
+		top: 32%;
+		left: 9%;
+	}
+}
+
+.text {
+	align-self: flex-end;
+	color: var(--pink);
+	font-family: "Major Mono Display", monospace;
+	font-size: var(--size);
+	margin: 0;
+	text-transform: uppercase;
+
+	.textClr {
+		color: var(--white);
+	}
+}
+
+@keyframes blow {
+	0% {
+		transform: scale(0.4) translateY(50%);
+	}
+
+	12% {
+		transform: scale(0.5) translateY(50%);
+	}
+
+	32% {
+		transform: scale(0.6) translateY(33%);
+	}
+
+	42% {
+		transform: scale(0.7) translateY(21%);
+	}
+
+	72% {
+		transform: scale(0.8) translateY(12%);
+	}
+
+	92% {
+		transform: scale(0.9) translateY(5%);
+	}
+
+	100% {
+		transform: scale(1) translateY(0) translateZ(0);
+	}
+}

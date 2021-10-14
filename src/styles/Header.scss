@@ -1,0 +1,22 @@
+.searchBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    input.locationInput {
+        border-radius: 40px;
+        margin-right: 10px;
+        padding: 8px;
+        width: 100%;
+        min-height: 46px;
+    }
+    img{
+        width: 50px;
+        height: auto;
+        position: absolute;
+        right: 15px;
+        background: #ffffff;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+}

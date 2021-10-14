@@ -1,0 +1,26 @@
+.weatherCont {
+    margin-top: 20px;
+    .weather-icon {
+        i.wi {
+            font-size: 160px;
+        }
+        h5{
+            text-transform: capitalize;
+            margin: 15px auto;
+        }
+    }
+
+    .weather-temprature {
+
+        font-size: 80px;
+    }
+
+    .weather-feelsLikeTemprature {
+
+        font-size: 40px;
+    }
+}
+.weatherText{
+    text-transform: capitalize;
+    margin-top: 20px;
+}
