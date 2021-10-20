@@ -4,6 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 It shows weather according to user search preference or location.
 
+Check Demo at :
+https://hiteshramola.com/weatherapp/
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -41,4 +44,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
  - Daily / Hourly forecast.
   - Making the API request common so other components can make use of the API without defining them again.
  - Better error handling for application.
- - Using dynamic URL for city search eg: www.weatherapp.com/delhi will show forecast for Delhi directly.
+ - Using dynamic URL for city search eg: https://hiteshramola.com/weatherapp/Delhi will show forecast for Delhi directly.
