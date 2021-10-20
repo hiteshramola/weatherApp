@@ -1,26 +1,110 @@
 .weatherCont {
     margin-top: 20px;
+
     .weather-icon {
+        position: relative;
+
         i.wi {
+            position: relative;
             font-size: 160px;
+            z-index: 1;
         }
-        h5{
+
+        h5 {
             text-transform: capitalize;
-            margin: 15px auto;
+            margin: 34px auto;
+            margin-bottom: 15px;
+        }
+
+        .colorCircle {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #D1E7D2;
+            border-radius: 100%;
         }
     }
 
     .weather-temprature {
-
         font-size: 80px;
     }
 
     .weather-feelsLikeTemprature {
-
         font-size: 40px;
     }
 }
-.weatherText{
+
+.weatherText {
     text-transform: capitalize;
     margin-top: 20px;
+}
+
+.sunTime {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    margin: 15px 0px;
+
+    span {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        padding: 15px;
+
+        i {
+            position: relative;
+            font-size: 40px;
+            margin: 12px 0px;
+
+            &:before {
+                position: relative;
+                z-index: 1;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0px;
+                width: 20px;
+                height: 20px;
+                z-index: 0;
+                background-color: #FFDAC1;
+                border-radius: 100%;
+            }
+        }
+    }
+}
+
+.otherWeatherDetails {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid;
+    padding-bottom: 15px;
+
+    span {
+        padding: 8px;
+        font-size: 24px;
+        position: relative;
+
+        &:not(:last-of-type)::before {
+            content: "";
+            width: 1px;
+            height: 100%;
+            display: block;
+            position: absolute;
+            left: 104%;
+            top: 50%;
+            background: black;
+            transform: translate(-50%, -50%);
+        }
+
+        i {
+            font-size: 30px;
+        }
+    }
 }

@@ -2,6 +2,7 @@
   "name": "weatherapp",
   "version": "0.1.0",
   "private": true,
+  "homepage":"weatherapp",
   "dependencies": {
     "axios": "^0.23.0",
     "react": "^17.0.2",

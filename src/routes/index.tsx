@@ -12,19 +12,22 @@ import Weather from '../components/Weather';
 function Routes() {
     return (
         <VariablesProvider>
-            <Router>
-                <Switch>
-                    <Route exact path="/">
-                        <div className="container">
+            <div className="container">
+                <Router>
+                    <Switch>
+                        <Route exact path={["/weatherapp/:cityName"]}>
                             <Header />
                             <Weather />
-                            <Loader />
-                        </div>
-                    </Route>
-                </Switch>
-            </Router>
+                        </Route>
+                        <Route exact path={["/weatherapp"]}>
+                            <Header />
+                            <Weather />
+                        </Route>
+                    </Switch>
+                </Router>
+                <Loader />
+            </div>
         </VariablesProvider>
     )
 }
-
 export default Routes;
